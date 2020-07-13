@@ -1,3 +1,3 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
-sh -c "$1"
+bash -c "$1"

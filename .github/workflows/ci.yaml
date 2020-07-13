@@ -10,7 +10,5 @@ jobs:
       - uses: ./my-action
         with:
           command: |
-            echo "--- env ---"
             env
-            echo "--- git ls-remote ---"
             git ls-remote

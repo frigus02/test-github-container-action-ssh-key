@@ -1,6 +1,4 @@
-FROM alpine:3.12
-
-RUN apk add --no-cache git
+FROM buildpack-deps:buster-scm
 
 COPY entrypoint.sh /entrypoint.sh
 
