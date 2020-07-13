@@ -8,7 +8,5 @@ jobs:
       - uses: ./my-action
         with:
           command: |
-            echo "PWD: $PWD"
-            echo "GIT_SSH_COMMAND: $GIT_SSH_COMMAND"
-            echo "RUNNER_TEMP: $RUNNER_TEMP"
+            env
             git ls-remote
