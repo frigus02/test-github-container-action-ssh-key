@@ -1,0 +1,14 @@
+name: CI
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: ./my-action
+        with:
+          command: |
+            echo "PWD: $PWD"
+            echo "GIT_SSH_COMMAND: $GIT_SSH_COMMAND"
+            echo "RUNNER_TEMP: $RUNNER_TEMP"
+            git ls-remote
