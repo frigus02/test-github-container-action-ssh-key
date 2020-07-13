@@ -5,8 +5,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+        with:
+          ssh-key: ${{ secrets.DEPLOY_KEY }}
       - uses: ./my-action
         with:
           command: |
+            echo "--- env ---"
             env
+            echo "--- git ls-remote ---"
             git ls-remote
